@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--
+  SCHOOL WEBSITE STARTER TEMPLATE
+  ================================
+  This file is meant to be opened, studied, and changed.
+  Every section has a comment explaining what it does and why.
+  Comments look like this one — the browser ignores anything
+  between <!-- and -->, so they're just notes for you.
+
+  
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This makes the page look correct on phones and tablets, not just desktops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natie Cove Infant and Pri School</title>
+
+  <style>
+    /* ============================================
+       CSS BASICS
+       CSS controls how things LOOK. HTML controls
+       what things ARE (a heading, a paragraph, a link).
+       Each rule below follows the pattern:
+         selector { property: value; }
+       ============================================ */
+
+    /* Reset some default browser spacing so we start from a clean slate */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .logo{
+      height: 50px;
+      width: auto;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .about-photo {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    :root {
+      /* CSS variables — define a color once, reuse it everywhere below */
+      --ink: #1c2b3a;        /* deep navy, used for text and header */
+      --paper: #faf7f0;      /* warm off-white background */
+      --gold: #c98a3e;       /* accent color, used sparingly */
+      --line: #e2dccc;       /* soft divider color */
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    /* ---------- Header & navigation ---------- */
+    header {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 1.5rem 2rem;
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .school-name {
+      font-size: 1.6rem;
+      letter-spacing: 0.02em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    nav a {
+      color: var(--paper);
+      text-decoration: none;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* ---------- Hero section ---------- */
+    .hero {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem 3rem;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: normal;
+      max-width: 20ch;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 60ch;
+      font-size: 1.15rem;
+      color: #435264;
+    }
+
+    /* ---------- General section styling ---------- */
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    section h2 {
+      font-weight: normal;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ---------- Programs, laid out as simple columns ---------- */
+    .programs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .program {
+      flex: 1 1 220px;
+    }
+
+    .program h3 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .program p {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #435264;
+    }
+
+    /* ---------- Contact ---------- */
+    address {
+      font-style: normal;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.98rem;
+    }
+
+    address a {
+      color: var(--ink);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #7a8494;
+    }
+
+    /* On narrow screens, stack the nav under the school name */
+    @media (max-width: 500px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+    HEADER: appears at the top of every page.
+    Contains the school name and the navigation menu.
+  -->
+  <header>
+    <div class="header-inner">
+      <div class="school-name"><img src="logo.jpg" alt="Natie Cove School logo" class = "logo">Natie Cove Infant and Pri School</div>
+      <nav>
+        <!-- Each <a> is a link. href="#about" jumps to the section
+             below with id="about". Later, change these to point to
+             separate pages, e.g. href="about.html" -->
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="login.html">Learner Portal</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO: the first thing a visitor sees -->
+  <div class="hero">
+    <h1>Curious minds start here.</h1>
+    <p>
+      Natie Cove Infant and Pri School serves learners from Grade 1 through Grade 7,
+      with a focus on hands-on learning, strong fundamentals, and a caring
+      community.
+    </p>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About us</h2>
+    <p>
+      Natie Cove was established in 2018 and enrolled 20 infant learners.The School transformed itself and now has 100 learners.
+    </p>
+    <img src="school-buldings.jpg" alt="Natie Cove buiding" class="about-photo">
+  </section>
+
+  <!-- PROGRAMS SECTION: a simple 3-column layout -->
+  <section id="programs">
+    <h2>Programs</h2>
+    <div class="programs">
+      <div class="program">
+        <h3>Foundation Phase</h3>
+        <p>Grades 1–3. Building reading, number sense, and curiosity.</p>
+      </div>
+      <div class="program">
+        <h3>Intermediate Phase</h3>
+        <p>Grades 4–6. Broadening subjects, introducing project work.</p>
+      </div>
+      <div class="program">
+        <h3>Coding & Technology</h3>
+        <p>Weekly lessons in algorithms, loops, and problem solving.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <address>
+      1241 Hintonvile , Chegutu<br>
+      Phone: <a href="tel:+263772947447">+263772947447</a><br>
+      Email: <a href="mailto:info@riversideprimary.example">admin@natiecocoveschool.co.zw</a>
+    </address>
+  </section>
+
+  <footer>
+    &copy; 2026 Natie Cove School Primary School
+  </footer>
+
+</body>
+</html>

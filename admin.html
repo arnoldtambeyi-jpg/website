@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin</title>
+</head>
+<body>
+  <h2>Add Student</h2>
+  <input id="name" placeholder="Full name"><br>
+  <input id="username" placeholder="Username"><br>
+  <input id="password" placeholder="Password"><br>
+  <select id="grade">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+  </select>
+  <button onclick="addStudent()">Add</button>
+  <p id="msg"></p>
+
+  <h3>Students</h3>
+  <ul id="list"></ul>
+  <h2>Enter Marks</h2>
+  <select id="StudentPick"></select>
+<select id="SubjectPick"></select>
+<input id="mark" type ="number" min = "0" max="100" placeholder="Mark"(0-100)>
+<button onclick="saveMark()">saveMark</button>
+<p id="markMsg"></p>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

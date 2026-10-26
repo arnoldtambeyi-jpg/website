@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Learner Portal</title>
+        <link rel="stylesheet" href="portal.css">
+    </head>
+    <body>
+        <div class="portal">
+            <h2>Welcome, <span id="studentName"></span></h2>
+            <p>Grade <span id="studentGrade"></span></p>
+            <table>
+                <thead><tr><th>Subject</th><th>Mark</th></tr></thead>
+                <tbody id="resultsBody"></tbody>
+            </table>
+            <button onclick="logout()">Log out</button>
+        </div>
+        <script src="data.js"></script>
+        <script src="portal.js"></script>
+    </body>
+</html> 

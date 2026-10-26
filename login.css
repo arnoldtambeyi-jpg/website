@@ -1,0 +1,46 @@
+body {
+    background: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial;
+    margin: 0;
+}
+.login-box  {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+text-align: center;
+}
+.login-box input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+#eye  {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
